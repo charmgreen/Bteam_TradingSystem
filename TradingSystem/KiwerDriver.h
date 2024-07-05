@@ -4,5 +4,5 @@
 class KiwerDriver : public StockBrockerDriver
 {
 public:
-    virtual string getStockCompanyName();
+    virtual string getStockCompanyName() override;
 };

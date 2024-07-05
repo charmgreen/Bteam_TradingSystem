@@ -4,5 +4,5 @@
 class NemoDriver : public StockBrockerDriver
 {
 public:
-    virtual string getStockCompanyName();
+    virtual string getStockCompanyName() override;
 };

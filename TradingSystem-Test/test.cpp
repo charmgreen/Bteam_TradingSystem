@@ -5,10 +5,10 @@
 using namespace std;
 using namespace testing;
 
-#include "../TradingSystem/AutoTradingSystem.cpp";
-#include "../TradingSystem/StockBrockerDriver.cpp";
-#include "../TradingSystem/KiwerDriver.cpp";
-#include "../TradingSystem/NemoDriver.cpp";
+#include "../TradingSystem/AutoTradingSystem.cpp"
+#include "../TradingSystem/StockBrockerDriver.cpp"
+#include "../TradingSystem/KiwerDriver.cpp"
+#include "../TradingSystem/NemoDriver.cpp"
 
 
 TEST(AutoTradingSystemTest, selectStockBrockerTest1) {

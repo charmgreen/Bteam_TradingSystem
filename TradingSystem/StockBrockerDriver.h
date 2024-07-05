@@ -9,3 +9,4 @@ public:
     StockBrockerDriver() {}
     virtual string getStockCompanyName();
 };
+

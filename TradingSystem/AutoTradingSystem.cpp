@@ -6,9 +6,8 @@
 StockBrockerDriver*
 AutoTradingSystem::selectStockBrocker(string name)
 {
-    StockBrockerDriver* driver = nullptr;
+    if (name == "kiwer") stockbrocker = new KiwerDriver();
+    if (name == "nemo") stockbrocker = new NemoDriver();
 
-    if (name == "kiwer") driver = new KiwerDriver();
-    if (name == "nemo") driver = new NemoDriver();
-    return driver;
+    return stockbrocker;
 }
