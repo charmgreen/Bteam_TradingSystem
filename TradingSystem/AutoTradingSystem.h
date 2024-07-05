@@ -11,6 +11,7 @@ public:
     bool login(string id, string password);
     bool buy(string stockCode, int count, int price);
     bool sell(string stockCode, int count, int price);
+    int getPrice(string stockId);
 private:
     StockBrockerDriver* stockbrocker;
 };
