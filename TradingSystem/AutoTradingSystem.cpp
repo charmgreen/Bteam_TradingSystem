@@ -13,6 +13,7 @@ AutoTradingSystem::selectStockBrocker(string name)
     return stockbrocker;
 }
 
+bool
 AutoTradingSystem::login(string id, string password) {
     bool loginResult = stockbrocker->stockLogin(id, password);
     return loginResult;
