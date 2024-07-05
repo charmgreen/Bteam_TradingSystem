@@ -51,3 +51,12 @@ TEST(AutoTradingSystemTest, buy1)
 	EXPECT_EQ(true, ats.buy("B5678", 3200, 5));
 	EXPECT_EQ(true, ats.buy("C4321", 62100, 3));
 }
+
+TEST(AutoTradingSystemTest, sell1)
+{
+	AutoTradingSystem ats;
+
+	EXPECT_EQ(true, ats.sell("A1234", 5600, 7));
+	EXPECT_EQ(true, ats.sell("B5678", 3200, 5));
+	EXPECT_EQ(true, ats.sell("C4321", 62100, 3));
+}
