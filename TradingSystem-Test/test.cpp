@@ -21,3 +21,23 @@ TEST(AutoTradingSystemTest, selectStockBrockerTest2) {
 
 	EXPECT_EQ(result, string{ "nemo" });
 }
+
+TEST(AutoTradingSystemTest, loginTest1)
+{
+	AutoTradingSystem ats;
+	string id = "samsung";
+	string password = "tka123tjd!@";
+	ats.selectStockBrocker("kiwer");
+
+	EXPECT_EQ(true, ats.login(id, password));
+}
+
+TEST(AutoTradingSystemTest, loginTest2)
+{
+	AutoTradingSystem ats;
+	string id = "hynix";
+	string password = "goodcompany";
+	ats.selectStockBrocker("nemo");
+
+	EXPECT_EQ(true, ats.login(id, password));
+}
