@@ -127,9 +127,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AutoTradingSystem.cpp" />
     <ClCompile Include="KiwerAPI.cpp" />
+    <ClCompile Include="KiwerDriver.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="NemoAPI.cpp" />
+    <ClCompile Include="NemoDriver.cpp" />
+    <ClCompile Include="StockBrockerDriver.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AutoTradingSystem.h" />
+    <ClInclude Include="KiwerDriver.h" />
+    <ClInclude Include="NemoDriver.h" />
+    <ClInclude Include="StockBrockerDriver.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
