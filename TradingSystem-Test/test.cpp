@@ -41,3 +41,13 @@ TEST(AutoTradingSystemTest, loginTest2)
 
 	EXPECT_EQ(true, ats.login(id, password));
 }
+
+
+TEST(AutoTradingSystemTest, buy1)
+{
+	AutoTradingSystem ats;
+
+	EXPECT_EQ(true, ats.buy("A1234", 5600, 7));
+	EXPECT_EQ(true, ats.buy("B5678", 3200, 5));
+	EXPECT_EQ(true, ats.buy("C4321", 62100, 3));
+}
