@@ -32,3 +32,8 @@ AutoTradingSystem::sell(string stockCode, int count, int price)
     stockbrocker->sell(stockCode, count, price);
     return true;
 }
+int
+AutoTradingSystem::getPrice(string stockId) {
+    int stockPrice = stockbrocker->getPrice(stockId);
+    return stockPrice;
+}
