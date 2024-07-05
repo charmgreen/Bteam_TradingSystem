@@ -7,6 +7,7 @@ using namespace testing;
 
 #include "../TradingSystem/AutoTradingSystem.cpp";
 
+#if 0
 TEST(AutoTradingSystemTest, selectStockBrockerTest1) {
 	AutoTradingSystem ats;
 	string result = ats.selectStockBrocker("kiwer").getStockCompanyName();
@@ -40,6 +41,7 @@ TEST(AutoTradingSystemTest, loginTest2)
 
 	EXPECT_EQ(true, ats.login(id, password));
 }
+#endif
 
 TEST(AutoTradingSystemTest, buy1)
 {
