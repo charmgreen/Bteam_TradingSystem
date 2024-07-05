@@ -7,11 +7,13 @@ StockBrockerDriver*
 AutoTradingSystem::selectStockBrocker(string name)
 {
     if (name == "kiwer") stockbrocker = new KiwerDriver();
-    if (name == "nemo") stockbrocker = new NemoDriver();
-
+    else if (name == "nemo") stockbrocker = new NemoDriver();
+    else throw NullStockCompany();
+    
     return stockbrocker;
 }
 
+bool
 AutoTradingSystem::login(string id, string password) {
     bool loginResult = stockbrocker->stockLogin(id, password);
     return loginResult;

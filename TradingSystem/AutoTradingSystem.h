@@ -1,5 +1,6 @@
 
 #include <string>
+#include <stdexcept>
 #include "StockBrockerDriver.h"
 
 class AutoTradingSystem
@@ -12,4 +13,13 @@ public:
     bool sell(string stockCode, int count, int price);
 private:
     StockBrockerDriver* stockbrocker;
+};
+
+class NullStockCompany : std::exception
+{
+public:
+    char const* what() const override
+    {
+        return "This Company does not exist.";
+    }
 };
