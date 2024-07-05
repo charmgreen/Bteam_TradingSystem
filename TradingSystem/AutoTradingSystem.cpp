@@ -12,8 +12,21 @@ AutoTradingSystem::selectStockBrocker(string name)
     return stockbrocker;
 }
 
-bool
 AutoTradingSystem::login(string id, string password) {
     bool loginResult = stockbrocker->stockLogin(id, password);
     return loginResult;
+}
+
+bool
+AutoTradingSystem::buy(string stockCode, int count, int price)
+{
+    stockbrocker->buy(stockCode, count, price);
+    return true;
+}
+
+bool
+AutoTradingSystem::sell(string stockCode, int count, int price)
+{
+    stockbrocker->sell(stockCode, count, price);
+    return true;
 }
