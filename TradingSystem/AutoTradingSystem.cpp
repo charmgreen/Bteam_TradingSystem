@@ -11,3 +11,8 @@ AutoTradingSystem::selectStockBrocker(string name)
 
     return stockbrocker;
 }
+
+bool
+AutoTradingSystem::login(string id, string password) {
+    return true;
+}

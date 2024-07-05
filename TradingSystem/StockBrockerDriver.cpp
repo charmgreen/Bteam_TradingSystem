@@ -5,3 +5,4 @@ StockBrockerDriver::getStockCompanyName()
 {
     return "";
 }
+

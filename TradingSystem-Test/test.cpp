@@ -45,7 +45,6 @@ TEST(AutoTradingSystemTest, loginTest2)
 	EXPECT_EQ(true, ats.login(id, password));
 }
 
-
 TEST(AutoTradingSystemTest, buy1)
 {
 	AutoTradingSystem ats;
