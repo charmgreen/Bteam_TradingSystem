@@ -6,6 +6,12 @@ NemoDriver::getStockCompanyName()
     return "nemo";
 }
 
+bool
+NemoDriver::stockLogin(string id, string password)
+{
+    return true;
+}
+
 void 
 NemoDriver::buy(string stockCode, int count, int price)
 {

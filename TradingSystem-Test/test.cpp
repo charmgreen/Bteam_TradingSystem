@@ -26,7 +26,7 @@ TEST(AutoTradingSystemTest, loginTest1)
 	AutoTradingSystem ats;
 	string id = "samsung";
 	string password = "tka123tjd!@";
-	ats.selectStockBrocker("kiwer");
+	ats.selectStockBrocker("kiwer")->stockLogin(id, password);
 
 	EXPECT_EQ(true, ats.login(id, password));
 }

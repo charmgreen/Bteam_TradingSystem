@@ -6,6 +6,12 @@ KiwerDriver::getStockCompanyName()
     return "kiwer";
 }
 
+bool
+KiwerDriver::stockLogin(string id, string password)
+{
+    return true;
+}
+
 void
 KiwerDriver::buy(string stockCode, int count, int price)
 {

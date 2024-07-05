@@ -5,3 +5,9 @@ StockBrockerDriver::getStockCompanyName()
 {
     return "";
 }
+
+bool
+StockBrockerDriver::stockLogin(string id, string password)
+{
+    return false;
+}
