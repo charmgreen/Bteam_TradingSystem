@@ -21,6 +21,22 @@ TEST(AutoTradingSystemTest, selectStockBrockerTest2) {
 	EXPECT_EQ(result, string{ "nemo" });
 }
 
+TEST(AutoTradingSystemTest, selectStockBrockerTest3) {
+	AutoTradingSystem ats;
+
+	//act
+	try
+	{
+		string result = ats.selectStockBrocker("mireaAsset")->getStockCompanyName();
+		FAIL();
+	}
+	catch (NullStockCompany& e)
+	{
+		//assert
+		EXPECT_EQ(string{ e.what() }, string{ "This Company does not exist." });
+	}
+}
+
 TEST(AutoTradingSystemTest, loginTest1)
 {
 	AutoTradingSystem ats;
