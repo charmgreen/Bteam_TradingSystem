@@ -60,3 +60,12 @@ TEST(AutoTradingSystemTest, sell1)
 	EXPECT_EQ(true, ats.sell("B5678", 3200, 5));
 	EXPECT_EQ(true, ats.sell("C4321", 62100, 3));
 }
+
+TEST(AutoTradingSystemTest, getPriceTest)
+{
+	AutoTradingSystem ats;
+
+	EXPECT_EQ(5600, ats.getPrice("A1234"));
+	EXPECT_EQ(3200, ats.getPrice("B5678"));
+	EXPECT_EQ(62100, ats.getPrice("C4321"));
+}
