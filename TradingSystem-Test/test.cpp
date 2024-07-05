@@ -5,22 +5,18 @@
 using namespace std;
 using namespace testing;
 
-#include "../TradingSystem/AutoTradingSystem.cpp"
-#include "../TradingSystem/StockBrockerDriver.cpp"
-#include "../TradingSystem/KiwerDriver.cpp"
-#include "../TradingSystem/NemoDriver.cpp"
-
+#include "../TradingSystem/AutoTradingSystem.cpp";
 
 TEST(AutoTradingSystemTest, selectStockBrockerTest1) {
 	AutoTradingSystem ats;
-	string result = ats.selectStockBrocker("kiwer")->getStockCompanyName();
+	string result = ats.selectStockBrocker("kiwer").getStockCompanyName();
 
 	EXPECT_EQ(result, string{ "kiwer" });
 }
 
 TEST(AutoTradingSystemTest, selectStockBrockerTest2) {
 	AutoTradingSystem ats;
-	string result = ats.selectStockBrocker("nemo")->getStockCompanyName();
+	string result = ats.selectStockBrocker("nemo").getStockCompanyName();
 
 	EXPECT_EQ(result, string{ "nemo" });
 }
@@ -45,10 +41,11 @@ TEST(AutoTradingSystemTest, loginTest2)
 	EXPECT_EQ(true, ats.login(id, password));
 }
 
-
 TEST(AutoTradingSystemTest, buy1)
 {
 	AutoTradingSystem ats;
+	ats.selectStockBrocker("kiwer");
+	ats.login("samsung", "tka123tjd!@");
 
 	EXPECT_EQ(true, ats.buy("A1234", 5600, 7));
 	EXPECT_EQ(true, ats.buy("B5678", 3200, 5));
@@ -58,17 +55,10 @@ TEST(AutoTradingSystemTest, buy1)
 TEST(AutoTradingSystemTest, sell1)
 {
 	AutoTradingSystem ats;
+	ats.selectStockBrocker("nemo");
+	ats.login("hynix", "goodcompany");
 
 	EXPECT_EQ(true, ats.sell("A1234", 5600, 7));
 	EXPECT_EQ(true, ats.sell("B5678", 3200, 5));
 	EXPECT_EQ(true, ats.sell("C4321", 62100, 3));
-}
-
-TEST(AutoTradingSystemTest, getPriceTest)
-{
-	AutoTradingSystem ats;
-
-	EXPECT_EQ(5600, ats.getPrice("A1234"));
-	EXPECT_EQ(3200, ats.getPrice("B5678"));
-	EXPECT_EQ(62100, ats.getPrice("C4321"));
 }

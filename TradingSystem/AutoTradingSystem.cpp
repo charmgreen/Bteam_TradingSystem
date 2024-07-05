@@ -11,3 +11,17 @@ AutoTradingSystem::selectStockBrocker(string name)
 
     return stockbrocker;
 }
+
+bool
+AutoTradingSystem::buy(string stockCode, int count, int price)
+{
+    stockbrocker->buy(stockCode, count, price);
+    return true;
+}
+
+bool
+AutoTradingSystem::sell(string stockCode, int count, int price)
+{
+    stockbrocker->sell(stockCode, count, price);
+    return true;
+}

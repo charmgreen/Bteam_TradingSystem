@@ -5,3 +5,15 @@ NemoDriver::getStockCompanyName()
 {
     return "nemo";
 }
+
+void 
+NemoDriver::buy(string stockCode, int count, int price)
+{
+    na.purchasingStock(stockCode, count, price);
+}
+
+void 
+NemoDriver::sell(string stockCode, int count, int price)
+{
+    na.sellingStock(stockCode, count, price);
+}
