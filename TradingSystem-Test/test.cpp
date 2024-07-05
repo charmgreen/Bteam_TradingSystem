@@ -31,7 +31,7 @@ TEST(AutoTradingSystemTest, selectStockBrockerTest3) {
 	//act
 	try
 	{
-		string result = ats.selectStockBrocker("mireaAsset").getStockCompanyName();
+		string result = ats.selectStockBrocker("mireaAsset")->getStockCompanyName();
 		FAIL();
 	}
 	catch (NullStockCompany& e)
