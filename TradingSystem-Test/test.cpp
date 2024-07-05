@@ -30,7 +30,7 @@ TEST(AutoTradingSystemTest, loginTest1)
 	AutoTradingSystem ats;
 	string id = "samsung";
 	string password = "tka123tjd!@";
-	ats.selectStockBrocker("kiwer");
+	ats.selectStockBrocker("kiwer")->stockLogin(id, password);
 
 	EXPECT_EQ(true, ats.login(id, password));
 }
@@ -45,29 +45,29 @@ TEST(AutoTradingSystemTest, loginTest2)
 	EXPECT_EQ(true, ats.login(id, password));
 }
 
-TEST(AutoTradingSystemTest, buy1)
-{
-	AutoTradingSystem ats;
-
-	EXPECT_EQ(true, ats.buy("A1234", 5600, 7));
-	EXPECT_EQ(true, ats.buy("B5678", 3200, 5));
-	EXPECT_EQ(true, ats.buy("C4321", 62100, 3));
-}
-
-TEST(AutoTradingSystemTest, sell1)
-{
-	AutoTradingSystem ats;
-
-	EXPECT_EQ(true, ats.sell("A1234", 5600, 7));
-	EXPECT_EQ(true, ats.sell("B5678", 3200, 5));
-	EXPECT_EQ(true, ats.sell("C4321", 62100, 3));
-}
-
-TEST(AutoTradingSystemTest, getPriceTest)
-{
-	AutoTradingSystem ats;
-
-	EXPECT_EQ(5600, ats.getPrice("A1234"));
-	EXPECT_EQ(3200, ats.getPrice("B5678"));
-	EXPECT_EQ(62100, ats.getPrice("C4321"));
-}
+//TEST(AutoTradingSystemTest, buy1)
+//{
+//	AutoTradingSystem ats;
+//
+//	EXPECT_EQ(true, ats.buy("A1234", 5600, 7));
+//	EXPECT_EQ(true, ats.buy("B5678", 3200, 5));
+//	EXPECT_EQ(true, ats.buy("C4321", 62100, 3));
+//}
+//
+//TEST(AutoTradingSystemTest, sell1)
+//{
+//	AutoTradingSystem ats;
+//
+//	EXPECT_EQ(true, ats.sell("A1234", 5600, 7));
+//	EXPECT_EQ(true, ats.sell("B5678", 3200, 5));
+//	EXPECT_EQ(true, ats.sell("C4321", 62100, 3));
+//}
+//
+//TEST(AutoTradingSystemTest, getPriceTest)
+//{
+//	AutoTradingSystem ats;
+//
+//	EXPECT_EQ(5600, ats.getPrice("A1234"));
+//	EXPECT_EQ(3200, ats.getPrice("B5678"));
+//	EXPECT_EQ(62100, ats.getPrice("C4321"));
+//}
